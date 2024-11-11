@@ -157,7 +157,7 @@ section h2{
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
-    .Navlinks{
+    .Navlinks,.apply-btn{
         display: none;
     }
     .Navlinks ul, .btn {
