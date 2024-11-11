@@ -157,8 +157,14 @@ section h2{
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
+    .Navlinks{
+        display: none;
+    }
     .Navlinks ul, .btn {
         display: none;
+    }
+    .menu{
+        display: block;
     }
     .menu button {
         display: inline-block;
