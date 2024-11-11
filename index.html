@@ -10,67 +10,73 @@
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body>
-    <div class="container home">
-      <article class="Navlinks py-4 flex">
-        <div class="menu">
-          <button></button>
-          <button></button>
-          <button></button>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Navbar Section -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <nav class="container mx-auto flex justify-between items-center py-4 px-4">
+        <div class="flex items-center">
+          <button class="text-3xl font-bold text-blue-600 menu" >☰</button>
+          <h1 class="text-2xl font-bold text-blue-600 ml-4">Application Assistant</h1>
         </div>
-        <div class="log">
-          <h2 class="text-2xl">Application Assistant</h2>
-        </div>
-        <ul class="flex">
-          <li class="px-2 text-xl"><a href="#home">Home</a></li>
-          <li class="px-2 text-xl"><a href="#about">About</a></li>
-          <li class="px-2 text-xl"><a href="#service">Services</a></li>
+        <ul class="flex space-x-4 text-lg font-semibold">
+          <li><a href="#home" class="hover:text-blue-600">Home</a></li>
+          <li><a href="#about" class="hover:text-blue-600">About</a></li>
+          <li><a href="#services" class="hover:text-blue-600">Services</a></li>
         </ul>
-        <button class="btn px-2 py-2 rounded text-xl">
-          <a href="#">Apply Now</a>
-        </button>
-      </article>
-      <article class="hello-section contained" id="home">
-        <h3 class="welcome text-center mt-20 text-5xl">
-          WELCOME TO OUR PORTFOLIO WEBSITE
-        </h3>
-        <h5 class="text-center text-2xl py-3">
-          I'm Gilbert, Civil Engineer , Application Assistant and more.
-        </h5>
-        <button class="rounded px-3 py-2 mb-8 mt-12">Get Started</button>
-      </article>
-    </div>
-    <div class="main-content contained" id="about">
-      <h2 class="text-3xl px-8 py-8 mt-10">About Us</h2>
-      <div class="about-me flex gap-10">
-        <p class="ml-5">
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book. It has survived not only
-          five centuries, but also the leap into electronic typesetting,
-          remaining essentially unchanged. It was popularised in the 1960s with
-          the release of Letraset sheets containing Lorem Ipsum passages, and
-          more recently with desktop publishing software like Aldus PageMaker
-          including versions of Lorem Ipsum.
-          <span hidden
-            >There are 0 practice questions in this document. The questions are
-          </span>
-          <br /><br />
-          <span style="border: 1px solid gray; border-radius: 3px; padding: 5px"
-            >Show More</span
-          >
-        </p>
-        <img src="./image/sabin.jpg" alt="myprofile" />
-      </div>
-    </div>
+        <a
+          href="#"
+          class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-500 transition duration-200"
+          >Apply Now</a
+        >
+      </nav>
+    </header>
 
-    <article class="footer">
-      <div>
-        <p class="text-center py-8 text-xl">
-          Caleb&copy;Copright.Allright Are Reserved.
-        </p>
+    <!-- Hero Section -->
+    <section id="home" class="text-center bg-cover bg-center py-20" style="background-image: url('./image/bg-d.jpeg');">
+      <div class="container mx-auto text-white">
+        <h2 class="text-5xl font-bold mb-4">Welcome to Our Portfolio Website</h2>
+        <p class="text-xl">I'm Gilbert, Civil Engineer, Application Assistant, and more.</p>
+        <button class="mt-10 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-500 transition duration-200">
+          Get Started
+        </button>
       </div>
-    </article>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="container mx-auto py-16 px-4">
+      <h2 class="text-4xl font-bold text-center mb-8">About Us</h2>
+      <div class="flex flex-wrap gap-10 items-center justify-center">
+        <p class="max-w-md text-gray-700 leading-loose">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+          industry's standard dummy text since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+          <br /><br />
+          <button class="mt-4 border border-gray-500 rounded px-3 py-2 text-gray-700 hover:bg-gray-100">Show More</button>
+        </p>
+        <img src="./image/sabin.jpg" alt="Profile" class="rounded-lg shadow-lg w-64 h-64 object-cover" />
+      </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="bg-gray-200 py-16">
+      <div class="container mx-auto text-center">
+        <h2 class="text-4xl font-bold mb-8">Our Services</h2>
+        <div class="flex flex-wrap gap-8 justify-center">
+          <!-- Example of a service card -->
+          <div class="bg-white rounded-lg shadow-md p-6 max-w-xs">
+            <h3 class="text-2xl font-semibold mb-2">Service 1</h3>
+            <p class="text-gray-700 mb-4">Description of the service offered here.</p>
+            <button class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-500 transition duration-200">Learn More</button>
+          </div>
+          <!-- Add more service cards as needed -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-gray-900 text-white py-8">
+      <div class="container mx-auto text-center">
+        <p>Caleb &copy; 2024. All Rights Reserved.</p>
+      </div>
+    </footer>
   </body>
 </html>
