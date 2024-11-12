@@ -94,7 +94,7 @@ body {
     display: flex;
     align-items: center;
     gap: 2rem;
-    padding: 2rem;
+    padding: 2.5rem;
     text-align: left;
     background-color: #f3f4f6;
     border-radius: 10px;
@@ -113,9 +113,11 @@ section h2{
 }
 
 .about-me img {
-    width: 40%;
-    max-width: 300px;
-    border-radius: 50%;
+    width: 25%;
+    max-width: 400px;
+    padding-top: 20px;
+    border-radius: 60%;
+    object-fit: cover;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -179,4 +181,8 @@ section h2{
     .about-me p, .about-me img {
         width: 100%;
     }
+    
+.about-me img {
+    border-radius: none;
+}
 }
