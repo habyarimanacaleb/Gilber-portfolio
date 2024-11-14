@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Application Form</title>
+  <link rel="stylesheet" href="./app.css">
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Application Form</h2>
+    <form id="applicationForm">
+      
+      <div class="field-group">
+        <div class="form-group">
+          <label for="firstName">First Name:</label>
+          <input type="text" id="firstName" name="firstName" required>
+        </div>
+        <div class="form-group">
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" name="lastName" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="">Select Gender</option>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="options">Options:</label>
+        <textarea id="options" name="options" required></textarea>
+      </div>
+
+      <div class="form-group">
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+
+    <div class="error" id="errorMessage">There was an error submitting the form. Please try again.</div>
+  </div>
+
+  <script>
+    const form = document.getElementById('applicationForm');
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const data = {
+        firstName: document.getElementById('firstName').value,
+        lastName: document.getElementById('lastName').value,
+        email: document.getElementById('email').value,
+        phone: document.getElementById('phone').value,
+        gender: document.getElementById('gender').value,
+        options: document.getElementById('options').value
+      };
+
+      try {
+        const response = await fetch('https://script.google.com/macros/s/AKfycbxcZwaQzwsJd7Cyoqh5wFH561hG2eE3XC9DjsmSnSC6qsC1Tgr2-jQxTLPjsCkISas/exec', { // Replace with your Web App URL
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+          mode:"no-cors"
+        });
+
+        if (response.ok) {
+          alert("Form submitted successfully!");
+        } else {
+          document.getElementById('errorMessage').style.display = 'block';
+        }
+      } catch (error) {
+        console.error("Error!", error);
+        document.getElementById('errorMessage').style.display = 'block';
+      }
+    });
+  </script>
+  
+</body>
+</html>
