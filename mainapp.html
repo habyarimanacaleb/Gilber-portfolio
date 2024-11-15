@@ -4,13 +4,125 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Application Form</title>
-  <link rel="stylesheet" href="./app.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    nav a{
+       text-decoration: none;
+       text-transform: capitalize;
+       color: inherit;
+       font-size: x-large;
+       margin-right: 5px;
+    }
+    nav, footer {
+      background-color: #323949;
+      color: white;
+      text-align: center;
+      padding: 15px;
+    }
+
+    .form-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-grow: 1;
+      padding: 20px;
+      text-align: center;
+    }
+
+    form {
+      background-color: white;
+      padding: 40px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 800px;
+      text-align: left;
+    }
+
+    form h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      font-size: 28px;
+      color: #333;
+    }
+
+    label {
+      font-weight: bold;
+      display: block;
+      margin-top: 20px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    .form-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .form-group div {
+      flex: 1;
+    }
+
+    button {
+      width: 100%;
+      padding: 12px;
+      background-color: #323949;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    button:hover {
+        background-color: #252932;
+    }
+    footer p a{
+        color: darkgray;
+        font-weight: bold;
+        font-family: Arial,sans-serif;
+    }
+    @media screen and (max-width: 768px) {
+      .form-container {
+        padding: 15px;
+      }
+
+      form {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 <body>
 
+  <nav>
+    <a href="./index.html">Application Assistant</a>
+  </nav>
+
   <div class="form-container">
     <form id="applicationForm">
-      <h2>Application Form</h2>
+      <h2>Application Formart</h2>
+      <p>Fill out this form with correct information so that we can help you to make your application suceed.</p>
 
       <label for="title">Title:</label>
       <input type="text" id="title" name="title" placeholder="e.g., Mr., Ms.">
@@ -22,13 +134,14 @@
       <input type="text" id="otherNames" name="otherNames" placeholder="e.g., Ange Marie / Bosco">
 
       <label for="initials">Initials:</label>
-      <input type="text" id="initials" name="initials">
+      <input type="text" id="initials" name="initials" placeholder="John Michael Doe, EX : J. M. D">
 
       <label for="dob">Date of Birth:</label>
       <input type="text" id="dob" name="dob" placeholder="DD-MON-YYYY e.g., 20-MAR-1997">
 
       <label for="gender">Gender:</label>
       <select id="gender" name="gender">
+        <option value="male">Select your gender</option>
         <option value="male">Male</option>
         <option value="female">Female</option>
         <option value="other">Other</option>
@@ -106,7 +219,11 @@
       <button type="submit">Submit</button>
     </form>
   </div>
-  
-  <script src="./main.js"></script>
+
+  <footer>
+    <p>&copy; 2024 Gilbert Portfolio. All rights reserved.</p>
+    <p><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a></p>
+  </footer>
+ <script src="./main.js"></script>
 </body>
 </html>
