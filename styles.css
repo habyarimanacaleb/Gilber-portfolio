@@ -43,7 +43,6 @@ body {
 .btn {
     padding: 0.5rem 1rem;
     border: 2px solid #1d4ed8;
-    color: #1d4ed8;
     font-weight: bold;
     transition: all 0.3s ease;
 }
@@ -128,12 +127,58 @@ section h2{
 .about-me img:hover {
     transform: scale(1.05);
 }
-
+/* services */
+#services {
+    background-color: #f4f4f4;
+    padding: 50px 0;
+    text-align: center;
+  }
+  
+  #services h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+  
+  #services p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .service-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px;
+  }
+  
+  .service-card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .service-card h3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .service-card p {
+    font-size: 1rem;
+    color: #555;
+  }
+  @media (max-width: 480px) {
+    .service-cards {
+      grid-template-columns: 1fr;
+    }
+  }
+    
 /* Footer */
 .footer {
     background-color: #1f2937;
     color: #ffffff;
-    padding: 1rem 0;
+    padding: 1.5rem 0;
     text-align: center;
     font-size: 0.9rem;
     bottom: 0;
@@ -153,10 +198,12 @@ section h2{
 
 @keyframes bg-change {
     0% {
-        background-color: #1d4ed8;
+        background-color: #1150f1;
+        opacity: .5;
     }
     100% {
         background-color: #3b82f6;
+        opacity: .95;
     }
 }
 
@@ -188,4 +235,5 @@ section h2{
 .about-me img {
     border-radius: none;
 }
+
 }
