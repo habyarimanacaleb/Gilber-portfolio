@@ -99,6 +99,9 @@ footer p a{
   .form-container {
     padding: 15px;
   }
+  .form-group{
+    display: block;
+  }
 
   form {
     padding: 25px;
