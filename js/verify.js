@@ -11,7 +11,7 @@ if (token) {
 
 async function verifyEmail(token) {
   try {
-    const response = await fetch(`http://localhost:5000/api/verify-email?token=${token}`);
+    const response = await fetch(`https://habyarimanacaleb.github.io/Gilber-portfolio/api/verify-email?token=${token}`);
     const data = await response.json();
 
     if (data.message === 'Email verified successfully') {
