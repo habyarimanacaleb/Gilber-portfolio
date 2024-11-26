@@ -1,34 +1,253 @@
+/* Global styles */
+html{
+    scroll-behavior: smooth;
+}
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9fafb;
+    color: #1f2937;
+    line-height: 1.6;
+}
+
+/* Navbar styles */
+.Navlinks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.Navlinks h2 {
+    color: #1d4ed8;
+    font-weight: bold;
+}
+
+.Navlinks ul {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.Navlinks ul li {
+    font-size: 1.1rem;
+    color: #374151;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.Navlinks ul li:hover {
+    color: #1d4ed8;
+    transform: scale(1.05);
+}
+
+.btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #1d4ed8;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+.menu{
+    display: none;
+}
+.menu-link{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    background-color: #f4f4f4;
-  }
-  
-  .container {
-    text-align: center;
-    padding: 20px;
+}
+
+/* Hero Section */
+.hello-section {
+    padding: 5rem 2rem;
+    background-image: url('./image/ur.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+    animation: bg-change 5s infinite alternate;
+}
+
+.welcome {
+    font-size: 3.5rem;
+    font-weight: bold;
+    color: #333;
+    letter-spacing: 1px;
+}
+
+.hello-section button {
+    background-color: #1d4ed8;
+    color: #ffffff;
+    padding: 0.5rem 1.5rem;
+    font-size: 1.2rem;
     border-radius: 8px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  h1 {
-    color: #4CAF50;
-  }
-  
-  button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background-color: #4CAF50;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
+    margin-top: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease;
+}
+
+.hello-section button:hover {
+    background-color: #3b82f6;
+    transform: scale(1.1);
+}
+
+/* About Section */
+.about-me img {
+    width: 40%;
+    max-width: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-me img:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Navbar styles */
+.Navlinks ul li {
+    font-size: 1.1rem;
+    color: #374151;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.Navlinks ul li:hover {
+    color: #1d4ed8;
+    transform: scale(1.05);
+}
+
+/* Buttons */
+.btn {
+    padding: 0.5rem 1rem;
+    border: 2px solid #1d4ed8;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #1d4ed8;
+    color: #ffffff;
+    transform: scale(1.05);
+}
+.close-btn{
+    display: none;
+}
+
+
+/* Animations */
+@keyframes bg-change {
+    0% {
+        background-color: #1150f1;
+        opacity: .5;
+    }
+    100% {
+        background-color: #3b82f6;
+        opacity: .95;
+    }
+}
+
+/* Responsive styles */
+@media screen and (max-width: 768px) {
+/* Close button in the menu */
+.close-btn {
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 2rem;
+    color: white;
     cursor: pointer;
-  }
-  button:hover {
-    background-color: #45a049;
-  }
-  
+    z-index: 20;
+    padding: 10px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    border: 2px solid white;
+}
+
+.menu-link {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    color: white;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    flex-direction: column;
+    gap: 1rem;
+    padding-top: 10vh;
+    text-align: center;
+    transition: height 0.3s ease;
+}
+
+.menu-link.active {
+    display: flex;
+}
+
+.menu-link a {
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+.menu-link a:hover {
+    color: #1d4ed8;
+}
+
+.menu-link .btn {
+    background-color: #1d4ed8;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.menu-link .btn:hover {
+    background-color: #3b82f6;
+    transform: scale(1.05);
+}
+
+
+    .menu {
+        display: block;
+        position: relative;
+    }
+
+    .menu button {
+        display: inline-block;
+    }
+
+    .hello-section h3 {
+        font-size: 2rem;
+    }
+
+    .about-me {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-me p, .about-me img {
+        width: 100%;
+    }
+
+    .about-me img {
+        border-radius: none;
+    }
+
+    .active {
+        display: block;
+    }
+}
