@@ -150,6 +150,47 @@ body {
         opacity: .95;
     }
 }
+form{
+    margin-left: auto;
+    margin-right: auto;
+}
+.form-field{
+    display:flex;
+    padding-bottom: 20px;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 800px;
+}
+.form-field input{
+    padding: 5px;
+    border-radius: 3px;
+}
+.form-field input:focus,.form-field textarea:focus{
+   border: 1px solid darkgray;
+}
+.form-field label:hover{
+    color: blue;
+}
+.form-field label::after{
+   content: "*";
+   color: red;
+   font-size: 20px;
+}
+.form-field input,.form-field label{
+    font-size: 1.2rem;
+    font-family: arial;
+    outline: none;
+    border: none;
+    transition: .5s ease;
+}
+.form-field  label{
+    text-align: left;
+}
+textarea{
+    resize: none;
+    height: 100px;
+    padding: 5px;
+}
 
 /* Responsive styles */
 @media screen and (max-width: 768px) {
@@ -159,15 +200,13 @@ body {
     position: absolute;
     top: 10px;
     left: 10px;
-    font-size: 2rem;
+    font-size: 2.5rem;
     color: white;
     cursor: pointer;
     z-index: 20;
     padding: 10px;
     width: 60px;
     height: 60px;
-    border-radius: 50px;
-    border: 2px solid white;
 }
 
 .menu-link {
@@ -232,6 +271,9 @@ body {
 
     .hello-section h3 {
         font-size: 2rem;
+    }
+    .hello-section p {
+        font-weight: 600;
     }
 
     .about-me {
