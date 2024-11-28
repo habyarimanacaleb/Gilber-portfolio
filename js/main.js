@@ -41,7 +41,7 @@ applicationAssistantServices.forEach(service => {
   assistantServicesContainer.appendChild(serviceCard);
 });
 document.getElementById('applicationForm').addEventListener('submit', function(event) {
-  event.preventDefault(); // Prevent the default form submission
+  event.preventDefault(); 
   const formData = new FormData(this); // Get form data
   // Convert FormData to a plain object
   const data = Object.fromEntries(formData);

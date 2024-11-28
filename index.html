@@ -121,18 +121,18 @@
     <div class="contact-container py-4">
       <div class="contact-form w-full text-center">
          <h1 class="text-4xl font-bold mb-10 py-10">Contact Us</h1>
-        <form class="mx-12">
+        <form class="mx-12" id="contact-form-data">
             <div class="form-field">
               <label for="name">Names</label>
-              <input type="text" name="name" placeholder="John Doe" required>
+              <input type="text" name="name" id="name" placeholder="John Doe" required>
             </div>
             <div class="form-field">
               <label for="email">Email</label>
-              <input type="text" name="email" placeholder="example@gmail.com" required>
+              <input type="text" name="email" id="email" placeholder="example@gmail.com" required>
             </div>
             <div class="form-field">
-              <label for="email">Meassage</label>
-              <textarea rows="8" cols="8" role="article" type="text" name="email" required placeholder="Write your querry or comments here..."></textarea>
+              <label for="message">Meassage</label>
+              <textarea rows="8" cols="8" role="article" type="text" name="message" id="message" required placeholder="Write your querry or comments here..."></textarea>
             </div>
             <div class="form-field">
               <button type="submit" id="submit-button" class="btn bg-blue-600 text-white px-4 py-2 ml-8 rounded-lg hover:bg-blue-500 transition" style="max-width: 100px;">Send</button>
@@ -190,5 +190,6 @@
   });
     </script>
     <script src="./js/main.js"></script>
+    <script src="./js/front-end-validation.js"></script>
   </body>
 </html>
