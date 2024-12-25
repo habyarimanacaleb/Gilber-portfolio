@@ -66,3 +66,4 @@ document.getElementById('applicationForm').addEventListener('submit', function(e
     alert('There was an error submitting your application.');
   });
 });
+
