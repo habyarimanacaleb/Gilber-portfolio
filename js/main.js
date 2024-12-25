@@ -40,11 +40,13 @@ applicationAssistantServices.forEach(service => {
   // Append the service card to the container
   assistantServicesContainer.appendChild(serviceCard);
 });
+
 document.getElementById('applicationForm').addEventListener('submit', function(event) {
   event.preventDefault(); 
   const formData = new FormData(this); // Get form data
   // Convert FormData to a plain object
   const data = Object.fromEntries(formData);
+  console.log(data);
   // Send POST request to the backend
   fetch('https://g-back-end-zhq1.onrender.com/api/application', {
     method: 'POST',

@@ -68,7 +68,6 @@
         </a>
       </div>
     </section>
-
    <!-- About Section -->
 <section id="about" class="py-16 px-4 bg-gray-50">
   <div class="container mx-auto text-center">
@@ -76,7 +75,6 @@
     <div class="about-me flex flex-wrap gap-10 items-center justify-center">
       <div class="about-content flex items-center justify-center" style="flex-direction: column;">
         <p class="max-w-md text-gray-700 leading-loose">
-  
           Lorem Ipsum is simply dummy text of the printing and typesetting
           industry. Lorem Ipsum has been the industry's standard dummy text
           since the 1500s...
@@ -96,14 +94,12 @@
             Show More
           </button>
       </div>
-         
       <img
         src="./image/sabin.jpg"
         alt="Profile"
         class="rounded-lg shadow-lg object-cover w-60 h-60"
       />
     </div>
-
     <!-- Additional content to show/hide -->
   </div>
 </section>
@@ -111,12 +107,10 @@
     <section class="application-assistant" id="services"   class="bg-gray-50 py-16">
       <h2 class="text-3xl font-semibold text-center text-gray-900 mb-6">Application Assistant Services</h2>
       <p class="text-lg text-center text-gray-700 mb-8">As an experienced application assistant, I offer a range of services to help clients streamline their application processes, from form filling to tracking submissions.</p>
-      
       <div class="assistant-services grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6 px-4">
           <!-- Dynamic services will be rendered here -->
       </div>
   </section>
-     
    <section class="contact-us" id="contact">
     <div class="contact-container py-4">
       <div class="contact-form w-full text-center">
@@ -141,32 +135,27 @@
       </div>
     </div>
    </section>
-
     <!-- Footer Section -->
     <footer class="bg-gray-900 text-white py-6">
       <div class="container mx-auto text-center">
         <p>Caleb &copy; 2024. All Rights Reserved.</p>
       </div>
     </footer>
-
     <script>
       // Get the menu button, menu links container, and close button
       const menuButton = document.querySelector(".menu");
       const menuLinks = document.querySelector(".menu-link");
       const closeBtn = document.querySelector(".close-btn");
-
       // Add an event listener to toggle the menu visibility
       menuButton.addEventListener("click", () => {
         menuLinks.classList.toggle("active");
         document.body.style.overflow = 'hidden';
       });
-
       // Close the menu when clicking the close button (×)
       closeBtn.addEventListener("click", () => {
         menuLinks.classList.remove("active");
         document.body.style.overflow = 'auto';
       });
-
       // Close the menu when clicking a link
       const menuLinksItems = menuLinks.querySelectorAll("a");
       menuLinksItems.forEach((item) => {
@@ -175,12 +164,10 @@
           document.body.style.overflow = 'auto';
         });
       });
-
       document.getElementById('show-more-btn').addEventListener('click', function() {
     const aboutContent = document.getElementById('more-about-us');
     // Toggle visibility of the additional content
     aboutContent.classList.toggle('hidden');
-    
     // Change the button text based on the visibility of the content
     if (aboutContent.classList.contains('hidden')) {
       this.textContent = 'Show More';  // Button text when content is hidden
