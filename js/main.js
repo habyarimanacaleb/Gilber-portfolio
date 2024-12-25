@@ -43,5 +43,5 @@ if (assistantServicesContainer) {
     assistantServicesContainer.appendChild(serviceCard);
   });
 } else {
-  console.error('Assistant services container not found');
+  console.log('Assistant services container not found');
 }
